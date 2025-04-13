@@ -1,6 +1,16 @@
 """
 This is an auto startup script example
-Credit: 
+
+It creates a file called 'StartupTestFile.txt' 
+in your desktop or wherever you want whenever 
+you start your computer.
+
+*** WAIT DON'T RUN THIS PROGRAM YET ***
+Before you run this program in the create_file() 
+function set the desktop variable to where you 
+want the file to be generated. 
+
+Credit: https://www.geeksforgeeks.org/autorun-a-python-script-on-windows-startup/
 """
 
 # module to edit the windows registry 
@@ -14,6 +24,9 @@ def create_file():
     text = "This file is a startup file"
     
     # Where to create the file
+    # Note: You can change the var name to whatever 
+    # you want I just used desktop because that's how 
+    # I tested it.
     desktop = r'path/to/your/desktop'
     file_path = os.path.join(desktop, 'StartupTestFile.txt')
     
